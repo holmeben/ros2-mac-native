@@ -1,4 +1,33 @@
-Start shell with `pixi shell -e clang-17`
-Then run a ros2 simulation. The terminal will fill with warnings.
-Stop this, then run `pixi install`, followed by `source install/setup.zsh`.
-Then the ros2 simulation will run at full speed, without warnings and will stop correctly.
+# ROS2 Mac Native
+
+## Setup
+First install [Pixi](https://pixi.prefix.dev/latest/installation).
+
+Create a directory for your ROS2 workspace.
+```
+mkdir ros2_ws
+```
+
+Clone the repository.
+```
+cd ros2_ws
+git clone https://github.com/holmeben/ros2-mac-native.git
+```
+
+Setup the Pixi environment.
+```
+pixi install -e clang-17
+```
+
+Enter the Pixi shell.
+```
+pixi shell -e clang-17
+source install/setup.zsh # You must run this manually due to a Pixi bug
+```
+
+Create the ROS2 package source directory.
+```
+mkdir src
+```
+
+Then clone the required packages into `src` and run the appropriate `colcon build` command from the workspace root directory.
