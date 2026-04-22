@@ -8,7 +8,7 @@ preview = ["pixi-build"]
 
 [target.osx-arm64.activation]
 scripts = ["install/setup.zsh"]
-env = { RMW_IMPLEMENTATION = "rmw_cyclonedds_cpp" }
+env = { RMW_IMPLEMENTATION = "rmw_cyclonedds_cpp", TURTLEBOT3_MODEL = "waffle" }
 
 [feature.build.target.unix.tasks]
 build = "colcon build --symlink-install --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DPython_FIND_VIRTUALENV=ONLY -DPython3_FIND_VIRTUALENV=ONLY"
