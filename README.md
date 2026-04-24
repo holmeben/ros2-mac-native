@@ -11,7 +11,7 @@ mkdir ros2_ws
 Clone the repository.
 ```
 cd ros2_ws
-git clone https://github.com/holmeben/ros2-mac-native.git
+git clone https://github.com/holmeben/ros2-mac-native.git .
 ```
 
 Setup the Pixi environment.
