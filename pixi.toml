@@ -7,7 +7,7 @@ version = "0.1.0"
 preview = ["pixi-build"]
 
 [target.osx-arm64.activation]
-scripts = ["install/setup.zsh"]
+scripts = ["install/setup.zsh", "copy_dylibs.sh"]
 env = { RMW_IMPLEMENTATION = "rmw_cyclonedds_cpp", TURTLEBOT3_MODEL = "waffle" }
 
 [feature.build.target.unix.tasks]
