@@ -6,7 +6,7 @@ platforms = ["osx-arm64", "osx-64"]
 version = "0.1.0"
 
 [activation]
-scripts = ["setup.sh"]
+scripts = ["install/setup.sh", "copy_dylibs.sh"]
 
 [activation.env]
 RMW_IMPLEMENTATION = "rmw_cyclonedds_cpp" 
