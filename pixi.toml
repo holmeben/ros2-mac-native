@@ -6,7 +6,7 @@ platforms = ["osx-arm64", "osx-64"]
 version = "0.1.0"
 
 [activation]
-scripts = ["install/setup.zsh", "copy_dylibs.sh"]
+scripts = ["setup.sh"]
 
 [activation.env]
 RMW_IMPLEMENTATION = "rmw_cyclonedds_cpp" 
@@ -52,3 +52,4 @@ llvm-openmp = "*"
 eigen = ">=3.4.0,<4"
 xtl = "*"
 doctest = "*"
+numpy = ">=2.4.3,<3"
