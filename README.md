@@ -16,13 +16,12 @@ git clone https://github.com/holmeben/ros2-mac-native.git
 
 Setup the Pixi environment.
 ```
-pixi install -e clang-17
+pixi install
 ```
 
 Enter the Pixi shell.
 ```
-pixi shell -e clang-17
-source install/setup.zsh # You must run this manually due to a Pixi bug
+pixi shell
 ```
 
 Create the ROS2 package source directory.
@@ -31,3 +30,15 @@ mkdir src
 ```
 
 Then clone the required packages into `src` and run the appropriate `colcon build` command from the workspace root directory.
+Then run `source setup.sh`. This must be done after any new build.
+
+## Run
+Run ROS2 commands as standard. On first launch, the Gazebo simulator may be slow to start. There may also be firewall permission popups, which should all be approved.
+
+## Known Issues (and workarounds)
+When running RViz, use `environment:=real` instead of `environment:=sim`. The sim preset loads the camera by default which causes a crash.
+The camera can be viewed via RQT instead of RViz.
+
+If the robot is not moving in the simulator, firewall settings may need to be adjusted.
+
+If the robot is moving erratically in the simulator (rare), restart the terminal.
