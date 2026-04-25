@@ -1,2 +1,2 @@
-source install/setup.zsh
+source install/setup.sh
 ./copy_dylibs.sh
